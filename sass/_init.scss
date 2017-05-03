@@ -1,0 +1,106 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+$font-stack: 'Ubuntu', sans-serif;
+
+$regular_weight: 400;
+$bold_weight: 700;
+$master_font_color:#000;
+
+/*COLORS*/
+
+$color1:#d69130;
+$color2:#f8b558;
+
+$primary_silver:#e2ddd7;
+
+/*SIZES*/
+
+$max-width: 980px;
+$full-width:96%;
+
+/*BODY*/
+
+html {
+	font-size: 15px;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	transition: all 0.2s;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+
+.bold{
+	font-weight: 700;
+	color: inherit;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.center_content{
+		position: relative;
+		margin: auto;
+		height: 100%;
+		width: 100%;
+		max-width: $max-width;
+}
+
+button {
+	background: none;
+	text-transform: uppercase;
+	transition: all 0.2s;
+	border: 0;
+	cursor: pointer;
+	&:active{
+		border: 0;
+	}
+}
+
+.btn {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-size: 1.2rem;
+	font-family:  $font-stack;
+	font-weight: $bold_weight;
+	width: 110px;
+	height:36px;
+}
+
+
+.btn_style1{
+	background-color: #000000;
+	color:#fff;
+	border: 2px solid #000000;
+	&:hover{
+		background-color: #ffffff;
+		color:#000;
+		border-color:#000000;
+	}
+}
+
+.btn_style2{
+	background-color: rgba(234, 234, 234, 0.99);
+	border: 2px solid #000000;
+	&:hover{
+		background-color: #000;
+		color:#fff;
+	}
+}
+

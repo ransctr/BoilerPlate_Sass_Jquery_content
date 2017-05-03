@@ -1,0 +1,32 @@
+@mixin flex-align($ver,$hor){
+    display:flex;
+    align-items: $ver;
+    justify-content: $hor;
+}
+ 
+@mixin flex-dir($dir){
+    display: flex;
+    flex-direction: $dir;
+}
+ 
+.flex-row{@include flex-dir(row)}
+ 
+.flex-row-around{@include flex-dir(row);
+justify-content: space-around}
+
+.flex-row-left{@include flex-dir(row);
+justify-content: flex-start}
+ 
+.flex-row-between{@include flex-dir(row);
+justify-content: space-between}
+
+.flex-row-between-mid{@include flex-dir(row);
+justify-content: space-between;align-items: center}
+
+
+/*Align verticaly & horiz*/
+
+.flex-middle-center{@include flex-align(center,center)}
+.flex-middle-bottom{@include flex-align(flex-end,center)}
+.flex-middle-left{@include flex-align(center,flex-start)}
+.flex-middle-right{@include flex-align(center,flex-end)}

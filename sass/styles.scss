@@ -1,0 +1,146 @@
+@import url(reset.css);
+@import 'init';
+@import 'flex';
+
+body {
+	box-shadow: 4px 5px;
+	font: 100% $font-stack;
+	color: $master_font-color;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	@media screen and (max-width: 590px) {
+		font-size: 14px;
+	}
+}
+
+h1 {
+	font-size: 2.2rem;
+	letter-spacing: 0.2rem;
+	font-weight: $regular_weight;
+	line-height: 2.4rem;
+	margin-top: 0;
+}
+
+h2 {
+	display: inline-block;
+	padding-bottom: 5px;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-weight: $regular_weight;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.link_selected {
+	color: $color1;
+}
+
+.links_list {
+	padding: 0;
+	margin: 0;
+	font-size: 1.1rem;
+	list-style: none;
+	li {
+		border-right: 2px solid $color1;
+		padding: 2px 20px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			border: none;
+			padding-right: 0;
+		}
+		a {
+			&:hover {
+				color: $color1;
+			}
+		}
+	}
+}
+
+
+/*HEADER*/
+
+.header {
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+	.header_content {
+		@extend .center_content;
+		transition: all 0.1s;
+		@media screen and (max-width: $max-width) {
+			width: $full-width;
+		}
+	}
+	/*HEADER TOP*/
+	.header_top {
+		position: relative;
+		align-items: center;
+		height: 100%;
+		padding-top: 10px;
+		.logo {
+			position: relative;
+		}
+		.buttons {
+			position: relative;
+			height: 100%;
+			width: 300px;
+		}
+	}
+	/*HEADER BOTTOM*/
+	.header_bottom {}
+}
+
+
+/*HEADER END*/
+
+.container {
+	position: relative;
+	min-height: 100vh;
+	z-index: 1;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	.slides {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		img {
+			width: 100%;
+		}
+	}
+	.main {
+		@extend .center_content;
+		background: #ededed;
+		@media screen and (max-width: $max-width) {
+			width: $full-width;
+		}
+		.content {
+			padding: 20px;
+			margin: auto;
+			line-height: 1.4rem;
+		}
+	}
+}
+
+.footer {
+	margin-top: 20px;
+	@extend .center_content;
+	@media screen and (max-width: $max-width) {
+		width: $full-width;
+	}
+	.buttom_links {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+		li {
+			font-size: 1rem;
+		}
+	}
+}
